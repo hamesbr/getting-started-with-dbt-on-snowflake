@@ -1,3 +1,5 @@
+--meaningless change
+
 -- What tables exist?
 SHOW TABLES IN SCHEMA tb_101.raw_pos;
 
