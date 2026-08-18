@@ -1,0 +1,13 @@
+demo:
+  target: dw
+  outputs:
+    dw:
+      type: snowflake
+      account: 'not needed'
+      user: 'not needed'
+      role: accountadmin
+      database: ddw
+      schema: edw
+      warehouse: compute_wh
+      threads: 16
+

@@ -1,8 +1,9 @@
 version: 2
 sources:
-- name: tb_101
+- name: tasty_bytes
   description: 'Point of Sale source data'
-  database: tasty_bytes_dbt_db
+  database: {{ env_var("DBT_DL_TASTY_BYTES") }}
+# database: dl_le_tasty_bytes
   schema: RAW
   tables:
   - name: COUNTRY
