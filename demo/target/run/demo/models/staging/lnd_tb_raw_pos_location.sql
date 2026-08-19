@@ -1,5 +1,5 @@
 
-  create or replace   view ddw.staging.lnd_tb_raw_pos_location
+  create or replace   view ddw.staging_BRENT_HAMES.lnd_tb_raw_pos_location
   
    as (
     SELECT *

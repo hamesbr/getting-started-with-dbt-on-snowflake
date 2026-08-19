@@ -84,7 +84,7 @@ def model(dbt, session):
 # this part is dbt logic for get ref work, do not modify
 
 def ref(*args, **kwargs):
-    refs = {"lnd_tb_raw_pos_location": "ddw.staging.lnd_tb_raw_pos_location", "lnd_tb_raw_pos_order_header": "ddw.staging.lnd_tb_raw_pos_order_header", "lnd_tb_raw_pos_truck": "ddw.staging.lnd_tb_raw_pos_truck"}
+    refs = {"lnd_tb_raw_pos_location": "ddw.staging_BRENT_HAMES.lnd_tb_raw_pos_location", "lnd_tb_raw_pos_order_header": "ddw.staging_BRENT_HAMES.lnd_tb_raw_pos_order_header", "lnd_tb_raw_pos_truck": "ddw.staging_BRENT_HAMES.lnd_tb_raw_pos_truck"}
     key = '.'.join(args)
     version = kwargs.get("v") or kwargs.get("version")
     if version:
@@ -113,11 +113,11 @@ class config:
 class this:
     """dbt.this() or dbt.this.identifier"""
     database = "ddw"
-    schema = "edw"
+    schema = "edw_BRENT_HAMES"
     identifier = "sales_metrics_by_location"
     
     def __repr__(self):
-        return 'ddw.edw.sales_metrics_by_location'
+        return 'ddw.edw_BRENT_HAMES.sales_metrics_by_location'
 
 
 class dbtObj:

@@ -4,10 +4,9 @@ demo:
     dw:
       type: snowflake
       account: 'not needed'
-      user: 'not needed'
+      user: '{{ env_var("DBT_CURRENT_USER") }}'
       role: accountadmin
-      database: ddw
+      database: '{{ env_var("DBT_CURRENT_DB") }}'
       schema: edw
       warehouse: compute_wh
-      threads: 16
-
+      threads: '{{ env_var("DBT_THREADS") | int }}'
